@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service Calculator {
+    rpc CalculateString (calculateStringInput) returns (calculateStringOutput) {}
+}
+
+message calculateStringInput {
+    string str = 1;
+}
+
+message calculateStringOutput {
+    int32 result = 1;
+}
