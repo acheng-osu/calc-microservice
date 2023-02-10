@@ -4,7 +4,7 @@
 This microservice allows a user to input a string representing a sequence of arithmetical calculations and obtain the result of the calculations. Our communication approach uses gRPC which is an API architectural style which will allows end users to call remote methods and services as if they were local objects. In our case, end users will pass a string parameter representing a series of calculations to our remote string calculator service via an interface resembling calling a local class method. The calculator service will then return an integer representing the result of said calculations to the end user.
 
 ## Making a connection with the microservice
-### *Preferred* Case 1: end user clones this repository
+### *(Preferred)* Case 1: end user clones this repository
 You're all set up!
 
 ### Case 2: starting from scratch
@@ -12,7 +12,9 @@ In your project root directory, create a new directory `protos` and create a fil
 
 `cd` to the project root directory and run the below code to automatically generate the required code/files to make a connection.
 
-`python3 -m grpc_tools.protoc -I./protos --python_out=. --pyi_out=. --grpc_python_out=. ./protos/calc.proto`
+```
+python3 -m grpc_tools.protoc -I./protos --python_out=. --pyi_out=. --grpc_python_out=. ./protos/calc.proto
+```
 
 Follow the instructions in this [guide](https://grpc.io/docs/languages/python/basics/#server) to continue setup.
 
@@ -50,11 +52,9 @@ Example:
 ```
 result = stub.CalculateString(calc_string)
 
-//expected output: 5
-print(result)
+print(result) //expected output: 5
 
-//expected output: <class 'int'>
-print(type(result))
+print(type(result)) //expected output: <class 'int'>
 ```
 
 ## UML diagram
