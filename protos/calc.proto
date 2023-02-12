@@ -9,5 +9,5 @@ message calculateStringInput {
 }
 
 message calculateStringOutput {
-    int32 result = 1;
+    float result = 1;
 }

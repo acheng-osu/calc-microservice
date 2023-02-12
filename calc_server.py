@@ -11,7 +11,7 @@ class CalculatorServicer(calc_pb2_grpc.CalculatorServicer):
 
     def CalculateString(self, request, context):
 
-        calc_result = int(sympy.sympify(request.str))
+        calc_result = sympy.sympify(request.str)
         return calc_pb2.calculateStringOutput(result=calc_result)
 
 def serve():
