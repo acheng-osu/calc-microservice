@@ -58,3 +58,5 @@ print(type(result)) //expected output: <class 'int'>
 ```
 
 ## UML diagram
+
+![uml diagram](./uml.png)
